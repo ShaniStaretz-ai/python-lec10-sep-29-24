@@ -13,7 +13,7 @@ print("bigger than 50:", l5);
 l6 = [x for x in [randint(1, 100) for _ in range(10)] if x > 50]
 print("random bigger than 50:", l6);
 str_l7 = input("enter sentence:");
-l7 = [letter for letter in str_l7 if letter != ' ' and letter != 't'];
+l7 = [letter for letter in str_l7 if letter not in [' ','t']];
 print("sentence without 't' or space:", l7);
 l8 = [randint(10, 99) for _ in range(10)];
 print("random 1-100:", l8);

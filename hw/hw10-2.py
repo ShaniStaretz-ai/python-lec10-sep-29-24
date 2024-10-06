@@ -23,8 +23,9 @@ except ValueError as error:
 SENTINEL: int = -999;
 l1 = [randint(1, 10) for i in range(4)];
 print("l1:", l1);
-try:
-    while True:
+while True:
+    try:
+
         num = int(input("enter number of index, between 0-9:"))
         if num == SENTINEL:
             print("goodbye!")
@@ -32,7 +33,7 @@ try:
         if not 0 <= num <= 9:
             raise IndexError(f"The value '{num}' is not in the range of the list, must be between 0-9 including");
         print(f"In index {num} you have the value:'{l1[num]}'");
-except IndexError as e:
-    print(f"\033[1;31mError in input:{e}\033[0m");
-except ValueError:
-    print(f"\033[1;31mError in Input:must be a number\033[0m");
+    except IndexError as e:
+        print(f"\033[1;31mError in input:{e}\033[0m");
+    except ValueError:
+        print(f"\033[1;31mError in Input:must be a number\033[0m");
